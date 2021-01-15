@@ -1,0 +1,32 @@
+[   
+    {
+        "id":"1",
+        "sku":"14-000005-000",
+        "nombre":"Poleron con logo blanco",
+        "clientes":["1","2"]
+    },
+    {
+        "id":"2",
+        "sku":"14-000005-001",
+        "nombre":"Poleron con logo rojo",
+        "clientes":["1","2"]
+    },
+    {
+        "id":"3",
+        "sku":"14-000005-002",
+        "nombre":"Poleron con logo negro",
+        "clientes":["1","2"]
+    },
+    {
+        "id":"4",
+        "sku":"14-000005-003",
+        "nombre":"Poleron con logo azul",
+        "clientes":["1","2"]
+    },
+    {
+        "id":"5",
+        "sku":"14-000005-003",
+        "nombre":"Poleron con logo azul",
+        "clientes":["3"]
+    }
+]

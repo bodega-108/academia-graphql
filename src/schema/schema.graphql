@@ -1,0 +1,82 @@
+type Query{
+    "Lista de productos"
+    productos:[Producto!]!
+    "Lista de estudiantes"
+    estudiantes:[Estudiante!]!
+    "Para seleccionar un estudiante por id"
+    estudiante(id: ID!):Estudiante! 
+    "Para selecionar un curso por su id"
+    curso(id: ID!):Curso! 
+    "Para obtener la lista de cursos de la academa"
+    cursos:[Curso!]!
+
+
+}
+type Mutation{
+
+    cursoNuevo(curso: CursoInput!): Curso!
+    modificarCurso(curso: CursoInput!): Curso!
+    eliminarCurso(id: ID!): Curso!
+}
+
+type Producto{
+    id:ID!
+    sku:String!
+    nombre:String!
+    clientes:[Cliente!]!
+    
+}
+
+type Estudiante{
+    id:ID!
+    name:String!
+    email:String!
+    website:String!
+    courses: [Curso!]!
+}
+
+type Curso{
+     id: ID!
+    title:String!
+    description:String!
+    clases: Int!
+    time: Float!
+    logo: String!
+    level:Nivel!
+    path: String!
+    teacher:String!
+    students:[Estudiante]
+    reviews:[Valoracion!]!
+
+}
+
+enum Nivel{
+    TODOS
+    NOVATOS
+    INTERMEDIOS
+    EXPERTO
+}
+
+type Valoracion{
+    id: ID!
+    name:String!
+    points:Float!
+    comments:String
+}
+
+type Cliente{
+    id: ID!
+    nombre:String!
+}
+
+input CursoInput{
+     id: ID
+    title:String!
+    description:String!
+    clases: Int!
+    time: Float!
+    logo: String!
+    level:Nivel!
+    path: String!
+    teacher:String!
+}
